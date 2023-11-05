@@ -1,4 +1,5 @@
 package tn.esprit.demo.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +17,7 @@ public class Universite implements Serializable
     private Long idUniversite;
     private String nomUniversite;
     private String adresse;
+    @JsonIgnore
     @OneToOne
     private Foyer foyer ;
 }

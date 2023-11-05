@@ -1,10 +1,10 @@
 package tn.esprit.demo.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Set;
 
 @Getter
@@ -17,11 +17,11 @@ public class Bloc implements Serializable
     private Long Bloc;
     private String nomBloc;
     private Long capaciteBloc;
-
+    @JsonIgnore
     @ManyToOne
     private Foyer foyer;
-
-    @OneToMany(mappedBy = "bloc_chambre")
+    @JsonIgnore
+    @OneToMany(mappedBy = "blocchambre")
     private Set<Chambre> chambres; // max Many taaml Set
 
 

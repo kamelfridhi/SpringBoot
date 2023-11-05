@@ -1,4 +1,5 @@
 package tn.esprit.demo.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,11 +14,14 @@ import java.util.Set;
 public class Reservation implements Serializable
 {
     @Id
-    private String idReservation;
+    private long idReservation;
     private Date anneeUniversitaire;
     private Boolean estValide ;
 
-
+    @JsonIgnore
+    @ManyToOne
+    private Chambre chamber;
+    @JsonIgnore
     @ManyToMany
     private Set<Etudiant> etudiants;
 }

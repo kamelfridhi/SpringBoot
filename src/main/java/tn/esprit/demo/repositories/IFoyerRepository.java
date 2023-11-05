@@ -5,5 +5,7 @@ import tn.esprit.demo.entities.Foyer;
 
 public interface IFoyerRepository extends CrudRepository<Foyer,Long> {
 
-    //List<Foyer>
+    Foyer findByNomFoyer(String nomFoyer);
+
+
 }

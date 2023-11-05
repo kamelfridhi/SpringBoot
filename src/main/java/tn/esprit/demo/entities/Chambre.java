@@ -1,10 +1,10 @@
 package tn.esprit.demo.entities;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.Set;
 
 @Getter
@@ -17,10 +17,10 @@ public class Chambre implements Serializable
     private Long idChambre;
     private Long numeroChambre ;
     private TypeChambre typeC ;
-
+    @JsonIgnore
     @ManyToOne
-    private Bloc bloc_chambre;
-
+    private Bloc blocchambre;
+    @JsonIgnore
     @OneToMany
     private Set<Reservation> reservations;
 

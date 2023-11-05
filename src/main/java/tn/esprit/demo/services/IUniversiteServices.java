@@ -10,4 +10,9 @@ public interface IUniversiteServices {
     void supprimerUniversite(long idUniversite);
     Universite getUniversite(long idUniversite);
     List<Universite> getAllUniversite();
+
+    Universite findbyNomuniv(String nom);
+    Universite affecterFoyerAUniversite(long idFoyer, String nomUniversite);
+
+    Universite desaffecterFoyerAUniversite (long idFoyer, long idUniversite) ;
 }

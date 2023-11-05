@@ -1,6 +1,7 @@
 package tn.esprit.demo.services;
 
 import tn.esprit.demo.entities.Chambre;
+import tn.esprit.demo.entities.TypeChambre;
 
 import java.util.List;
 
@@ -10,4 +11,8 @@ public interface IChambreServices {
     void supprimerChambre(long idChambre);
     Chambre getChambre(long idChambre);
     List<Chambre> getAllChambres();
+
+    List<Chambre> getChambresParNomBloc( String nomBloc) ;
+    long nbChambreParTypeEtBloc(TypeChambre type, long idBloc) ;
+    List<Chambre> getChambresNonReserveParNomFoyerEtTypeChambre( String nomFoyer,TypeChambre type) ;
 }

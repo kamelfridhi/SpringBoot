@@ -35,4 +35,14 @@ public class FoyerRestController {
         foyerServices.supprimerFoyer(idFoyer);
     }
 
+    @PutMapping("update")
+    public Foyer ModifierFoyer( @RequestBody Foyer f) {
+        return foyerServices.updateFoyer(f);
+    }
+
+    @GetMapping("getfoyer/{id}")
+    public Foyer getfoyerByid(@PathVariable long id){
+        return foyerServices.getFoyer(id);
+    }
+
 }
