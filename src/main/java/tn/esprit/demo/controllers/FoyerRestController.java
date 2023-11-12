@@ -45,4 +45,9 @@ public class FoyerRestController {
         return foyerServices.getFoyer(id);
     }
 
+    @GetMapping ("/ajouterFoyerEtAffecterAUniversite/{idUniv}")
+    public void ajouterFoyerEtAffecterAUniversiteApi(@RequestBody Foyer f,@PathVariable Long idUniv){
+        foyerServices.ajouterFoyerEtAffecterAUniversite(f,idUniv);
+    }
+
 }

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.esprit</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>Fridhi_Kamel_4TWIN7</artifactId>
 	<version>1.0</version>
 	<name>Fridhi_kamel_4TWI7</name>
 	<description>Demo project for Spring Boot</description>
@@ -50,10 +50,10 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-ui</artifactId>
-			<version>1.6.12</version>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.0</version>
 		</dependency>
-	</dependencies>
+		</dependencies>
 
 	<build>
 		<plugins>

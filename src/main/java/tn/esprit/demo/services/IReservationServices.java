@@ -14,4 +14,7 @@ public interface IReservationServices {
     Reservation ajouterReservationEtAssignerAChambreEtAEtudiant (Reservation res, Long
             numChambre, Long cin) ;
     long getReservationParAnneeUniversitaire(Date debutAnnee, Date finAnnee ) ;
+
+    Reservation ajouterReservation (long idChambre, long cinEtudiant) ;
+    Reservation annulerReservation(long cinEtudiant);
 }

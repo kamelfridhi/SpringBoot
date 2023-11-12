@@ -51,5 +51,10 @@ public class ChambreRestController {
         return chambreService.getChambresNonReserveParNomFoyerEtTypeChambre(nomFoyer,type);
 
     }
+    @GetMapping("getChambresParBlocEtType/{idBloc}/{typeC}")
+    public List<Chambre> getChambresParBlocEtType(@PathVariable long idBloc, @PathVariable TypeChambre typeC){
+        return chambreService.getChambresParBlocEtType(idBloc,typeC);
+
+    }
 
 }

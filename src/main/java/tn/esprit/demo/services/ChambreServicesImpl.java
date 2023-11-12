@@ -84,4 +84,12 @@ public class ChambreServicesImpl  implements IChambreServices{
 
         return chambre;
     }
+    @Override
+    public List<Chambre> getChambresParBlocEtType(long idBloc, TypeChambre typeC)
+    {
+        Bloc b = blocRepository.findById(idBloc).orElse(null);
+
+        return  chambreRepo.findByBlocchambreAndTypeC(b,typeC);
+    }
+
 }

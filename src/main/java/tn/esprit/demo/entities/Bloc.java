@@ -18,10 +18,11 @@ public class Bloc implements Serializable
     private String nomBloc;
     private Long capaciteBloc;
     @JsonIgnore
-    @ManyToOne
+    @ManyToOne(cascade ={CascadeType.PERSIST})
     private Foyer foyer;
     @JsonIgnore
-    @OneToMany(mappedBy = "blocchambre")
+    @OneToMany(mappedBy = "blocchambre", fetch =FetchType.EAGER,
+            cascade ={CascadeType.PERSIST,CascadeType.REMOVE})
     private Set<Chambre> chambres; // max Many taaml Set
 
 
