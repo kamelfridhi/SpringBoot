@@ -17,4 +17,6 @@ public interface IChambreRepository  extends CrudRepository<Chambre,Long> {
     List<Chambre> findByBlocchambreAndTypeC(Bloc bloc, TypeChambre type);
     @Query("SELECT c FROM Chambre c WHERE c.blocchambre = :bloc AND c.typeC = :type")
     List<Chambre> findByBlocAndTypeChambre(@Param("bloc") Bloc bloc, @Param("type") TypeChambre type);
+
+
 }

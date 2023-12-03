@@ -18,7 +18,7 @@ public class Chambre implements Serializable
     private Long numeroChambre ;
     @Enumerated(EnumType.STRING)
     private TypeChambre typeC ;
-    @JsonIgnore
+
     @ManyToOne
     private Bloc blocchambre;
     @JsonIgnore

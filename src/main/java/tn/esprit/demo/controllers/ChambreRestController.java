@@ -10,6 +10,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("chambre")
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class ChambreRestController {
     private final IChambreServices chambreService;
 
@@ -19,7 +20,7 @@ public class ChambreRestController {
     }
 
     @PostMapping("/add")
-    public Chambre adeChambre(@RequestBody Chambre ch){
+    public Chambre addChambre(@RequestBody Chambre ch){
         return chambreService.ajouterChambre(ch);
     }
 
@@ -56,5 +57,12 @@ public class ChambreRestController {
         return chambreService.getChambresParBlocEtType(idBloc,typeC);
 
     }
+    @GetMapping("getChambresParId/{idChambre}")
+    public Chambre getChambresParId(@PathVariable long idChambre){
+        return chambreService.getChambreParId(idChambre);
+    }
+
+
+
 
 }

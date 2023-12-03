@@ -92,4 +92,12 @@ public class ChambreServicesImpl  implements IChambreServices{
         return  chambreRepo.findByBlocchambreAndTypeC(b,typeC);
     }
 
+    @Override
+    public Chambre getChambreParId(long id) {
+
+        return chambreRepo.findById(id).orElse(null);
+    }
+
+
+
 }

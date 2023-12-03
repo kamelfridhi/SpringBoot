@@ -13,4 +13,6 @@ public interface IBlocServices {
 
     public Bloc affecterChambresABloc(List<Long> numChambre, String nomBloc);
     public Bloc affecterBlocAFoyer( String nomBloc, String nomFoyer);
+
+
 }

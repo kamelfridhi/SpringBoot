@@ -11,6 +11,8 @@ import tn.esprit.demo.repositories.IChambreRepository;
 import tn.esprit.demo.repositories.IFoyerRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
 @AllArgsConstructor
 @Service
 public class BlocServicesImpl implements IBlocServices {
@@ -61,4 +63,7 @@ public class BlocServicesImpl implements IBlocServices {
         b.setFoyer(f);
         return b;
     }
+
+
+
 }

@@ -9,6 +9,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("bloc")
 @RestController
+@CrossOrigin(origins = "*")
 public class BlocRestController {
 
     private final IBlocServices blocService;
@@ -54,4 +55,6 @@ public class BlocRestController {
     {
         return blocService.affecterBlocAFoyer(nomBloc,nomFoyer);
     }
+
+
 }

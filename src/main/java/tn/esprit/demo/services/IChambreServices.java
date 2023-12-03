@@ -1,5 +1,6 @@
 package tn.esprit.demo.services;
 
+import tn.esprit.demo.entities.Bloc;
 import tn.esprit.demo.entities.Chambre;
 import tn.esprit.demo.entities.TypeChambre;
 
@@ -16,5 +17,8 @@ public interface IChambreServices {
     long nbChambreParTypeEtBloc(TypeChambre type, long idBloc) ;
     List<Chambre> getChambresNonReserveParNomFoyerEtTypeChambre( String nomFoyer,TypeChambre type) ;
     List<Chambre> getChambresParBlocEtType(long idBloc, TypeChambre typeC);
+
+    Chambre getChambreParId(long id);
+
 
 }

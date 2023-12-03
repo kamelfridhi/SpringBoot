@@ -10,4 +10,6 @@ import java.util.List;
 public interface IBlocRepository extends CrudRepository<Bloc,Long> {
     Bloc findByNomBloc(String nombloc);
     List<Bloc> findByFoyer(Foyer foyer);
+
+
 }
