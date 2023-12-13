@@ -21,6 +21,8 @@ public class Chambre implements Serializable
 
     @ManyToOne
     private Bloc blocchambre;
+
+
     @JsonIgnore
     @OneToMany
     private Set<Reservation> reservations;

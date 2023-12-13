@@ -14,7 +14,7 @@ public class Bloc implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Bloc;
+    private Long bloc;
     private String nomBloc;
     private Long capaciteBloc;
     @JsonIgnore
